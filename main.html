@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="converter-container">
+    <h1>💱 Currency Converter</h1>
+    
+    <div class="currency-box">
+      <div class="input-group">
+        <label for="fromAmount">Amount:</label>
+        <input type="number" id="fromAmount" placeholder="Enter amount" value="1">
+      </div>
+      
+      <div class="input-group">
+        <label for="fromCurrency">From Currency:</label>
+        <input type="text" list="currencies" id="fromCurrency" placeholder="Select currency" value="USD">
+      </div>
+    </div>
+
+    <div class="swap-icon">⇅</div>
+
+    <div class="currency-box">
+      <div class="input-group">
+        <label for="toAmount">Converted Amount:</label>
+        <input type="number" id="toAmount" placeholder="Result" readonly>
+      </div>
+      
+      <div class="input-group">
+        <label for="toCurrency">To Currency:</label>
+        <input type="text" list="currencies" id="toCurrency" placeholder="Select currency" value="INR">
+      </div>
+    </div>
+
+    <datalist id="currencies">
+      <option value="USD">USD - US Dollar</option>
+      <option value="EUR">EUR - Euro</option>
+      <option value="GBP">GBP - British Pound</option>
+      <option value="INR">INR - Indian Rupee</option>
+      <option value="JPY">JPY - Japanese Yen</option>
+      <option value="AUD">AUD - Australian Dollar</option>
+      <option value="CAD">CAD - Canadian Dollar</option>
+      <option value="CNY">CNY - Chinese Yuan</option>
+    </datalist>
+
+    <div class="convert-btn-container">
+      <button onclick="convertCurrency()">Convert</button>
+    </div>
+
+    <div class="result-text" id="resultText"></div>
+  </div>
+
+</body>
+<script src="./main.js"></script>
+</html>
